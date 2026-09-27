@@ -1,0 +1,12 @@
+title: Kevin Heavey
+description: Writing by Kevin Heavey.
+url: https://kevinheavey.dev
+baseurl: ""
+lang: en
+timezone: Europe/Dublin
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - README.md

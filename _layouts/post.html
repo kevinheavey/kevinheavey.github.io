@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="eyebrow"><a href="{{ '/' | relative_url }}">Writing</a><span aria-hidden="true"> / </span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time></p>
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.description %}<p class="post-deck">{{ page.description | escape }}</p>{% endif %}
+  <div class="prose">{{ content }}</div>
+  <p class="back-link"><a href="{{ '/' | relative_url }}">← All writing</a></p>
+</article>
