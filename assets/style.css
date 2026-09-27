@@ -28,14 +28,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  min-height: 112px;
+  min-height: 76px;
   border-bottom: 1px solid var(--rule);
 }
 .wordmark {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.55rem;
+  font-size: .92rem;
   font-weight: 700;
-  letter-spacing: -.045em;
+  letter-spacing: .01em;
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
@@ -49,7 +48,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
   letter-spacing: .015em;
   text-decoration: none;
 }
-.site-header nav a:hover, .site-header nav a[aria-current] { color: var(--ink); }
+.site-header nav a:hover { color: var(--ink); }
 .intro { padding: clamp(4rem, 9vw, 7.5rem) 0 clamp(3rem, 6vw, 5rem); }
 .eyebrow {
   color: var(--accent);
@@ -106,8 +105,8 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .not-found p:not(.eyebrow) { color: var(--muted); }
 
 @media (max-width: 620px) {
-  .site-header { min-height: 90px; align-items: flex-start; flex-direction: column; justify-content: center; gap: .7rem; padding: 1.25rem 0; }
-  .site-header nav { gap: 1.4rem; }
+  .site-header { min-height: 72px; gap: 1rem; }
+  .site-header nav { gap: 1rem; }
   .intro { padding-top: 4rem; }
   .year-group { display: block; }
   .year-group h2 { padding: 1.4rem 0 .2rem; }
