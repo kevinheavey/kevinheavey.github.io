@@ -11,6 +11,7 @@ Create a Markdown file in `_posts` named `YYYY-MM-DD-post-title.md`:
 layout: post
 title: "Post title"
 description: "A short description for search results and feeds."
+image: "/assets/your-post-preview.png" # optional; use a 1200×630 PNG
 ---
 
 Write your post here in Markdown.
