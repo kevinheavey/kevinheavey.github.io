@@ -1,0 +1,167 @@
+---
+layout: post
+title: "Futarchy as Trustless Joint Ownership"
+description: "Futarchy solves the problem of trustless joint ownership."
+date: 2024-10-28
+---
+<p><em>This essay was originally published on <a href="https://www.umbraresearch.xyz/writings/futarchy">umbraresearch.xyz</a> on October 28, 2024</em></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Since its <a href="http://mason.gmu.edu/~rhanson/futarchy2000.pdf" target="_blank" rel="noopener noreferrer">inception</a>, futarchy has been presented as a way to make smarter decisions by harnessing the predictive power of markets. This is accurate, but exposure to the lawless wasteland of blockchain governance has revealed a more fundamental innovation: futarchy solves the problem of <strong>trustless joint ownership</strong>.</p>
+
+<p>By <em>joint ownership</em> we mean multiple entities having shares in something valuable, such as a company, a DAO, a piece of land, etc. By <em>trustless</em> we mean that this ownership can be enforced without a legal system or social pressure, even if majority shareholders are acting maliciously towards the minority.</p>
+
+<p>In this piece we discuss futarchic governance for all organizations, but with a focus on DAOs as trustless joint ownership is an existential issue for them.</p>
+
+<h2 id="failed-governance-models">Failed Governance Models</h2>
+
+<p>It may not be obvious that this was a previously unsolved problem, since companies with multiple shareholders have existed for a long time, and some DAOs voluntarily respect norms around minority tokens. But companies uphold joint ownership through laws that protect minority holders from things like <a href="https://en.wikipedia.org/wiki/Shareholder_oppression" target="_blank" rel="noopener noreferrer">shareholder oppression</a>—if someone owns 51% of a company’s shares they are still constrained by legal obligations, and will suffer legal consequences if they try to transfer all the firm’s assets to their own name or exclude minority holders from dividends.</p>
+
+<p>These laws are flawed, but they work well enough that most equity holders are not practically concerned with having their rights infringed. Meanwhile the only minority protection offered by token voting DAOs is the good grace of founders and majority holders—not the most prudent thing to bet on. To quote a 2021 <a href="https://vitalik.eth.limo/general/2021/08/16/voting3.html" target="_blank" rel="noopener noreferrer">blog post</a> by Vitalik Buterin:</p>
+
+<blockquote><p>[Coin]<!-- --> voting may well only appear secure today precisely because of the imperfections in its neutrality (namely, large portions of the supply staying in the hands of a tightly-coordinated clique of insiders).</p>
+
+</blockquote>
+
+<p>Wholesale looting of token voting DAOs is not uncommon. Some famous examples include <a href="https://x.com/brian_smith_0/status/1455224772162473989" target="_blank" rel="noopener noreferrer">multiple incidents with Serum</a>
+and the <a href="https://cointelegraph.com/news/mango-labs-sues-embezzlement-dao" target="_blank" rel="noopener noreferrer">CKS Mango raid</a>, which remains unresolved.</p>
+
+<p>More common than outright looting is plain disregard for the interests of token holders. Some may recall the Uniswap DAO <a href="https://gov.uniswap.org/t/governance-proposal-005-defi-education-fund/12963" target="_blank" rel="noopener noreferrer">proposal</a> to create the <em>DeFi Education Fund</em>. <a href="https://gov.uniswap.org/t/proposal-removal-of-established-cranial-follicles-fund/13314" target="_blank" rel="noopener noreferrer">Much scorn was poured</a> on the decision to grant $20m worth of UNI to an organization with no track record based on a short forum post. And while the DEF is at least a real organization that continues to operate, it is hard to imagine that voters believed the proposal to be accretive for the UNI token (it is unclear if any supporters even made that argument).</p>
+
+<p>The fundamental problem is that governance tokens are only useful if you command a majority of the voting power, and unlike equity shares they entitle minority holders to nothing. In the typical token voting DAO, there is no internal mechanism to prevent the majority from raiding the treasury and sharing it only amongst themselves. If minority holders ultimately have no claim to shared assets, then those assets are not jointly owned. In other words, <strong>joint ownership without minority protection is an illusion.</strong></p>
+
+<p>And since majoritarian DAOs typically do not operate as actual companies (and if they did it would be difficult to describe them as decentralized), any semblance of minority ownership they project only lasts as long as the majority wants it to.</p>
+
+<h3 id="side-note-quadratic-voting-doesnt-fix-this">Side note: quadratic voting doesn’t fix this</h3>
+
+<p>Quadratic voting is a popular idea in certain blockchain communities. It could have a place in democratic governance but is a poor fit for crypto given that it requires preventing Sybil attacks and collusion, which is likely impossible in practice.</p>
+
+<p>In many discussions of quadratic voting on blockchains, proof of humanity is mentioned as the main obstacle. This is true in the same way that rocket technology is the main obstacle to humans living on the surface of the sun—the first problem on the path is already quite difficult, and the problems get much harder after that. After solving proof of humanity, one would need to somehow solve the problem of collusion.</p>
+
+<p>While it seems feasible to prove with some confidence that an account is associated with a specific human, there is no general solution for proving that this human did not collude with others (such as being bribed to vote a certain way). Collusion can be made difficult in certain settings: for example, it is quite hard to directly bribe voters in an election with paper ballots, especially if voters are not allowed to take photos as proof of their vote. This method prevents collusion by not using blockchain or cryptography at all—any kind of digital voting system where one can vote remotely is susceptible to collusion due to the ease of proving one’s vote and coordinating with others.</p>
+
+<p>So while quadratic voting doesn’t unlock joint ownership because it doesn&#x27;t give minority holders rights, that is something of a moot point since there are several other compelling reasons not to use it in DAO governance.</p>
+
+<p>If DAOs morphed into regular companies with on-chain votes, they would not be DAOs anymore. So what can rescue the promise of decentralized autonomous organizations? </p>
+
+<h2 id="futarchy-fixes-this">Futarchy Fixes This</h2>
+
+<p>In the previously-mentioned <a href="https://vitalik.eth.limo/general/2021/08/16/voting3.html" target="_blank" rel="noopener noreferrer">blog post</a> where he discussed quadratic voting and correctly identified many problems, Vitalik did almost arrive on asset futarchy as the solution. However he fell just before the finish line:</p>
+
+<blockquote><p>&quot;Pure&quot; futarchy has proven difficult to introduce, because in practice objective functions are very difficult to define (it&#x27;s not just coin price that people want!)</p>
+
+</blockquote>
+
+<p>It may have been true that some people wanted more than just coin price in the objective function. Without speculating on why they thought this, these people were mostly wrong. <strong>Coin price is the fairest and most elegant objective function</strong>, and probably the only acceptable one for a DAO that holds valuable assets (read on to learn why).</p>
+
+<h3 id="asset-futarchy">Asset futarchy</h3>
+
+<p>Futarchy covers multiple use cases but we will consider only a specific kind of futarchy here, which we call <em>asset futarchy</em>. Under asset futarchy, people own shares in a valuable asset (such as a company), and the fate of that asset is subject to <em>decision markets</em>. Decision markets are a mechanism whereby participants bet on the value of the asset conditional on whether a given proposal passes or fails. This is the kind of futarchy implemented by the <a href="https://docs.metadao.fi" target="_blank" rel="noopener noreferrer">MetaDAO</a>.</p>
+
+<p>As conceived by Robin Hanson, the motivation behind futarchy was that betting markets are very good at aggregating information. But as with many great inventions, there are deeper applications that took time to reveal themselves.</p>
+
+<h3 id="how-futarchy-enables-joint-ownership">How futarchy enables joint ownership</h3>
+
+<p>Keeping in mind the earlier point that joint ownership is only upheld if there is protection for minority holders, let’s start with an example that demonstrates how decision markets make it unprofitable for majority holders to steal from the minority:</p>
+
+<p>Suppose Alice and Bob have a DAO, governed by a token called ABC. For simplicity’s sake, let’s assume this DAO doesn’t really do anything but it does have a bunch of valuable assets, and the value of the whole DAO is just the value of these assets. Bob owns a majority of the ABC tokens, and he wants to send all the treasury to his own wallet.</p>
+
+<h4 id="decision-market-mechanism">Decision market mechanism</h4>
+
+<p>The decision market involves four conditional tokens: fABC, pABC, pUSD and fUSD (the p and f stand for <em>pass</em> and <em>fail</em>). If the proposal passes, pABC is redeemed for regular ABC, pUSD becomes regular USD, and fABC and fUSD become worthless. The opposite happens if the proposal fails.</p>
+
+<p>To decide if the proposal passes, we set up two markets, pABC/pUSD and fABC/fUSD. Participants can redeem 1 pABC and 1 fABC for 1 ABC token, and likewise for the USD tokens.</p>
+
+<p>If pABC/pUSD trades at a higher price than fABC/fUSD (based on some aggregation like a TWAP or closing auction), then the proposal passes.</p>
+
+<p>Since pABC and pUSD get converted to ABC and USD, The pABC/pUSD trades become equivalent to regular ABC/USD trades, and the fABC/fUSD trades are effectively busted, since they involve trading one worthless asset against another.</p>
+
+<h4 id="bobs-evil-plan">Bob’s evil plan</h4>
+
+<p>For Bob’s proposal to pass, pABC/pUSD needs to trade above fABC/fUSD. We also have the constraint that one of pABC/pUSD and fABC/fUSD must trade above ABC/USD and the other must trade below, otherwise there would be an arbitrage: if they both traded below you could simply buy both and get cheap ABC no matter how the proposal goes; and similarly if they both traded above you could just sell both conditional tokens.</p>
+
+<p>From both Alice and Bob’s perspectives, 1 fABC is worth 1 ABC because the DAO carries on as normal if the proposal fails, and 1 pABC is worth 0 because as soon as the proposal passes, the DAO won’t possess anything anymore—all the assets will go to Bob.</p>
+
+<p>This is bad news for Bob, as he’ll need to buy worthless pABC above the spot price and sell fABC below its fair value (the pre-proposal spot price) if he wants this proposal to pass. It gets worse—suppose he hopes he can just buy a little bit of pABC and still come out in profit: unless he has a good way to manipulate the settlement price, Alice can just keep selling pABC to him at a premium until she runs out of tokens. The outcome of Bob’s plot would simply be Bob buying all of Alice’s tokens for more than they’re worth.</p>
+
+<p>Suppose instead Bob focuses on pushing down the price of fABC—as long as Alice (or anyone else who cares to participate) has capital to buy discounted fABC in the fail market, Bob’s proposal will be rejected <em>and</em> he will have lost money by selling ABC for less than it’s worth. But what if Alice has no capital and the asset is some peculiarity that nobody else would care to trade? This is a pathological case that strays into speculative fiction, but in practice it would still be an audacious bet for Bob to make. After all, the outcome for Bob if he <em>almost</em> succeeds tends to be one where he sells a lot of fABC at a heavily discounted price.</p>
+
+<p>It is worth noting that this example works as long as Bob doesn’t have 100% of the tokens—there is no special significance to him crossing the 50% threshold.</p>
+
+<h4 id="mechanism-enforced-ownership">Mechanism-enforced ownership</h4>
+
+<p>Using similar logic, it is easy to prove that Bob also can’t profitably seize a fraction of the treasury, and that futarchic DAO tokens can be priced as a claim on the DAO’s assets, as opposed to majoritarian tokens which are better priced as claims on whatever the majority feels like giving you.</p>
+
+<p>Taking things further, let&#x27;s suppose Bob instead made a well-intentioned proposal and Alice merely disagreed about its value.
+If Bob believed strongly enough in his honest proposal, he would end up buying some or all of Alice&#x27;s tokens at a price that looked cheap to him and expensive to her. <strong>This highlights a big part of what makes futarchy powerful: simply being able to exit at a fair price <em>if and only if</em> your preferred outcome loses in the decision market.</strong></p>
+
+<p>All this builds a picture of meaningful ownership, enforced not by fiat or social pressure but by clever mechanism design. </p>
+
+<h4 id="raid-prevention-in-practice">Raid prevention in practice</h4>
+
+<p>The MetaDAO repelled its first attempted pillaging in its very early days: in <a href="https://medium.com/@benhawkins18/stress-testing-the-futarchy-1f4fb6d0b4ba" target="_blank" rel="noopener noreferrer">proposal 6</a> Ben Hawkins tried and failed to make the DAO sell him tokens at a discount, despite spending a lot of capital to push the market around.</p>
+
+<p>In his own words:</p>
+
+<blockquote><p>Attempting to manipulate the market created a scenario where the potential gains from the proposal’s passage were outweighed by the sheer cost of acquiring the necessary META.</p>
+
+</blockquote>
+
+<h2 id="lower-trust-and-lower-cost">Lower Trust <em>And</em> Lower Cost</h2>
+
+<p>Anyone who works in crypto will be familiar with the rule of thumb that minimizing trust makes your work more expensive in other ways. For example, a core reason why blockchains tend to be slow is the fact that the network nodes cannot blindly trust each other.</p>
+
+<p>Futarchy may turn this rule on its head. As mentioned earlier, the traditional legal methods of resolving shareholder disputes are decent but flawed. Legal action can be horrendously expensive, while a decision market is quite cheap.</p>
+
+<p>Take for example a <a href="https://www.reuters.com/business/media-telecom/paramount-skydance-merger-faces-court-challenge-by-shareholder-2024-07-25/" target="_blank" rel="noopener noreferrer">recent lawsuit</a> about the ongoing Paramount-Skydance merger, which alleges that it unfairly benefits one shareholder: </p>
+
+<blockquote><p>The lawsuit, filed by Scott Baker, claims the merger&#x27;s primary purpose is to cash out media mogul Shari Redstone&#x27;s investment in Paramount at a substantial premium, while other stockholders will receive a significantly lower payout.</p>
+
+</blockquote>
+
+<p>While there are many nuances to this case like the existence of different share classes, futarchy is in principle well-equipped to solve the most difficult issue: how to fairly resolve disagreements about the value of the deal. And although lawyers would still be all over a deal like this, futarchy has the potential to significantly reduce the attack surface for legal disputes.</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<h3 id="settlement-price-calculation">Settlement price calculation</h3>
+
+<p>So far we treated the settlement price—the price that decides whether the proposal passes—as a given. However it is not trivial to calculate a fair settlement price. The current TWAP implementation used by the MetaDAO is a work in progress. Its current form demands a lot of active participation and monitoring from traders. For example, a trader who does not monitor a MetaDAO decision market until the final day of trading may find that they disagree strongly with the TWAP value but cannot do anything about it because the market has diverged from the TWAP.</p>
+
+<h3 id="custodial-relationships-and-economic-security">Custodial relationships and economic security</h3>
+
+<p>Futarchy is not sufficient for cases where a DAO has control over an asset but is not supposed to be the owner of that asset. For example, consider an upgradeable borrow-lend protocol with a fair market cap of $10m and total deposits of $100m. Futarchy alone would not be enough to reject a proposal to steal all the deposits—in such a scenario the attacker would be rational in buying DAO tokens above their “fair” value. </p>
+
+<h3 id="regulatory-and-legal-questions">Regulatory and legal questions</h3>
+
+<p>For regular companies, decision markets would want to have some legal weight—if the losing side could just sue to overturn a decision market outcome, that would make them much less useful.</p>
+
+<p>Insider trading laws could also create difficulties. There may be proposals where insiders do not possess non-public information material to the proposal, but restrictions around how and when they may trade in company shares effectively preclude them from participating in decision markets.</p>
+
+<h3 id="soft-rug-pulls">Soft rug pulls</h3>
+
+<p>Futarchy cannot prevent a founder from promising to work on something, raising funds and then running off with the money. For example, the <a href="https://www.dlnews.com/articles/defi/parrot-protocol-team-rage-quits-and-wait-for-big-payday/" target="_blank" rel="noopener noreferrer">Parrot DAO incident</a> saw the DAO&#x27;s assets distributed among token holders on a pro-rata basis in a way that might appear fair at first glance. The catch here was that the team held most of the tokens because they minted themselves those tokens for free, so this represented the founders pocketing at least $47m of investor funds after doing almost no work.</p>
+
+<p>Futarchy would not have prevented this, as the original sin of the Parrot Protocol was giving funds to a team with no mechanism to stop them from running away with the money. The one and only Parrot DAO proposal would likely still have passed under futarchy, because at that point it was better than doing nothing.</p>
+
+<h3 id="other-kinds-of-futarchy">Other kinds of futarchy</h3>
+
+<p>Futarchy has also been proposed for things that are not assets, like government policies. For these kinds of futarchy, choosing an objective function is usually very difficult and the arguments made in this piece are not directly applicable.</p>
+
+<h2 id="implications">Implications</h2>
+
+<h3 id="robustness">Robustness</h3>
+
+<p>One implication is that futarchy is useful even if the underlying market is quite small and inefficient. The benefits of protecting ownership and resolving disagreements still exist even if the market is quite wrong about the value of the underlying asset.</p>
+
+<p>Hence we should try to make it easy to express an opinion in decision markets, whether or not the asset is liquid or even publicly traded. Auctions seem like a good fit here, since decision markets live for only a short period of time and we know when trading on the proposal is supposed to wrap up.</p>
+
+<h3 id="urgency">Urgency</h3>
+
+<p>Futarchy is such a radical improvement over majoritarian DAOs that even in its infancy it should already be ordained as the default governance mechanism, perhaps with training wheels like a security council to veto exploits.</p>
+
+<p>All DAOs that persist with token voting over futarchy should begin to feel increasingly uncomfortable, because in time it will be assumed that any DAO still carrying on this way is malicious or incompetent—like websites that still use HTTP instead of HTTPS. If you want people to share ownership of your business, you either become a normal company with no governance token, or you bind your fate to futarchy and let the market decide.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Futarchy is not merely a governance system built on prediction markets. When used to control valuable assets, it is a foundational new primitive that enables joint ownership without requiring trust between owners or third parties. This understanding of futarchy has several consequences, but in particular it undermines justifications for coin voting DAO governance as a stopgap measure until something better comes along. Something better has come along, and it makes existing systems look more uncivilized with each passing day.</p>
