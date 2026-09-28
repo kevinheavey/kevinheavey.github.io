@@ -3,10 +3,10 @@ layout: post
 title: "How to top every leaderboard on highload.fun"
 description: "How I reached the top of every working Highload leaderboard in three days."
 show_description: false
-image: /assets/highload/social-preview.png
-image_width: 1730
-image_height: 909
-image_alt: "Top scores on highload.fun in Zig, C/C++, C#, Go, and Rust"
+image: /assets/highload/social-preview-v2.png
+image_width: 1200
+image_height: 630
+image_alt: "How to top every leaderboard on highload.fun — Kevin Heavey"
 date: 2026-09-28
 ---
 
