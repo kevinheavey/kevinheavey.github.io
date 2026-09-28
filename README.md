@@ -1,6 +1,6 @@
 # Kevin Heavey's blog
 
-This is a small Jekyll blog published by GitHub Pages at https://kevinheavey.dev.
+This is a small Jekyll blog published by GitHub Pages at https://heavey.dev.
 
 ## Add a post
 
