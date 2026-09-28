@@ -32,4 +32,6 @@ date: 2026-09-28
 
 8. **(Optional) Get a time machine to win the unbeatable MD5 challenge.** This challenge is currently broken because recent submissions always run a bit slower than they used to, and unlike the other challenges it’s already at its theoretical floor modulo machine noise. I thought it would be undignified to complain about this since I already hammered the server to win the 24 other challenges.
 
+9. **(Optional) Get a time machine to top the home-page leaderboard.** There is a Reputation Points leaderboard on the home page of highload.fun. Being first in every challenge only took me to third place, because it rewards beating existing records by huge margins, which is something that the top two guys did a lot of and which is much harder to do now. So the top two might stay there forever
+
 Notwithstanding the MD5 issue above, I think there is still plenty of juice left to squeeze out of these challenges. I, however, will retire from highload.fun and leave that for others to enjoy. I hope to see myself dethroned soon!
