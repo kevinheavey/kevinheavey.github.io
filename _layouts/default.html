@@ -4,6 +4,9 @@
     {% assign preview_title = page.title | default: site.title %}
     {% assign preview_description = page.description | default: site.description | strip_html %}
     {% assign preview_image = page.image | default: '/assets/preview.png' %}
+    {% assign preview_image_width = page.image_width | default: 1200 %}
+    {% assign preview_image_height = page.image_height | default: 630 %}
+    {% assign preview_image_alt = page.image_alt | default: 'Kevin Heavey — Writing' %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f7f8f6">
@@ -16,14 +19,15 @@
     <meta property="og:description" content="{{ preview_description | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:image" content="{{ preview_image | absolute_url }}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Kevin Heavey — Writing">
+    <meta property="og:image:width" content="{{ preview_image_width }}">
+    <meta property="og:image:height" content="{{ preview_image_height }}">
+    <meta property="og:image:alt" content="{{ preview_image_alt | escape }}">
     {% if page.layout == 'post' %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ preview_title | escape }} · {{ site.title | escape }}">
     <meta name="twitter:description" content="{{ preview_description | escape }}">
     <meta name="twitter:image" content="{{ preview_image | absolute_url }}">
+    <meta name="twitter:image:alt" content="{{ preview_image_alt | escape }}">
     {% if page.url == '/' %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Kevin Heavey","url":"https://heavey.dev/"}</script>{% endif %}
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v=3">
