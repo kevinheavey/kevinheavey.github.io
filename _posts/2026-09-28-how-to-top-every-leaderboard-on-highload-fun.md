@@ -14,7 +14,7 @@ date: 2026-09-28
 
 *What Highload looks like now*
 
-1. **Use the right model, obviously.** I started this brief adventure by trying out Opus 5.5 on the parse_integers challenge, where GPT 5.5 Sol had got me to third place. Astra had failed to make progress on it and Fable [refused](https://x.com/dj_d_sol/status/2080726431772839956), so when Opus 5.5 Medium topped the leaderboard in an hour or so, I could see it was very special. It then cost only about half a week’s usage on a Claude Max 20x subscription to win all the other challenges. However, Opus 5.5 is no secret and Highload has been active without anyone beating my records yet, so we must consider what else is needed beyond spamming AI.
+1. **Use the right model, obviously.** I started this brief adventure by trying out Opus 5.5 on the *Parse Integers* challenge, where GPT 5.5 Sol had got me to third place. Astra had failed to make progress on it and Fable [refused](https://x.com/dj_d_sol/status/2080726431772839956), so when Opus 5.5 Medium topped the leaderboard in an hour or so, I could see it was very special. It then cost only about half a week’s usage on a Claude Max 20x subscription to win all the other challenges. However, Opus 5.5 is no secret and Highload has been active without anyone beating my records yet, so we must consider what else is needed beyond spamming AI.
 
 2. **Automate submissions.** This should also be obvious, even if Highload was not exactly built with automation in mind. Copy-pasting and checking the scoreboard yourself takes far too long. AI can automate this quickly, just make sure it’s not doing some silly computer use thing.
 
